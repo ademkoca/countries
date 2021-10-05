@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #fafafa;
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --elements: hsl(0, 0%, 100%);
+}
+[data-theme="dark"] {
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --elements: hsl(209, 23%, 22%);
+  --input: hsl(209, 23%, 22%);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--background);
+}
+
+header{
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+}
+
+#main-container {
+    max-width: 1424px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 16px;
+}
+.dark-mode {
+    text-align: right;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-select {
+    width: 50%;
+}
+
+select option {
+    color: var(--text);
+    font-weight: 400;
+}
+#countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+h1 a:link, h1 a:hover, h1 a:visited, h1 a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+.country {
+display: grid;
+background-color: var(--elements);
+cursor: pointer;
+
+}
+.country div img{
+    width:100%;
+    height: auto;
+    
+}
+
+.country-info h2 {
+font-size: 16px;
+font-weight: 700;
+}
+.country-info p {
+    font-size: 12px;
+}
+
+.flag {
+    min-height: 50%;
+}
+
+.details {
+    padding-top: 2rem;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    min-height:69vh;
+}
+
+.detail-flag {
+    /* grid-column: 1/3; */
+    justify-self: center;
+    /* align-self: center; */
+}
+
+.detail-row {
+    display: block;
+    width: 100%;
+    
+}
+.detail-container {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}

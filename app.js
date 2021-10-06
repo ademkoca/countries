@@ -1,4 +1,5 @@
-url = `https://restcountries.com/v2/all`;
+function initial() {
+    let url = `https://restcountries.com/v2/all`;
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -20,6 +21,8 @@ fetch(url)
         });
         document.getElementById('countries').innerHTML = html;
     });
+
+}
 
 var selectedValue = "";
 function filter(value) {
@@ -72,10 +75,12 @@ searchBar.addEventListener('keypress', function (e) {
 });
 
 function searchCountry() {
+    
+    console.log("Search triggered!");
     previousContent.push(document.getElementById('content-container').innerHTML);
     document.getElementById('btnBack').style = "display: block;";
     document.getElementById('filter').style="display:none;"
-    url = `https://restcountries.com/v2/name/` + searchBar.value;
+    let url = `https://restcountries.com/v2/name/` + searchBar.value;
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -127,6 +132,7 @@ function detail(id) {
 
     previousContent.push(document.getElementById('content-container').innerHTML);
     document.getElementById('filter').style="display:none;"
+    document.getElementById('Search').style="display:none;"
     // console.log(previousContent);
     document.getElementById('details').classList.add('details');
     document.getElementById('btnBack').style = "display: block;";
@@ -486,3 +492,5 @@ if (currentTheme) {
         document.querySelector('.bi-moon-fill').classList.remove('bi-moon');
     }
 }
+
+ initial();

@@ -34,13 +34,10 @@
   </head>
   <body>
     <div class="container" id="main-container">
-      <header class="container px-2 py-4"><h1 class="title"><a href="/">Where in the world?</a></h1><span class="dark-mode"><i class="bi bi-moon"></i>&nbsp;Dark Mode</span></header>
+      <header class="container px-2 py-4"><h1 class="title"><a href="/">Where in the world?</a></h1><span class="dark-mode" id="dark-mode-switch"><i class="bi bi-moon"></i>&nbsp;Dark Mode</span></header>
       <div class="content" id="content-container">
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-          </div>
-          <input id="Search" type="text" class="form-control" placeholder="Search for a country..." aria-label="Search for a country" aria-describedby="basic-addon1">
+            <input id="Search" type="text" class="form-control" placeholder="Search for a country..." aria-label="Search for a country" aria-describedby="basic-addon1">
         </div>
         <select class="form-select col-sm-6" id="filter" onmousedown="this.value='';" onchange="filter(this.value);" aria-label="Default select example" >
           <option selected>Filter by Region</option>
@@ -50,7 +47,7 @@
           <option value="4">Europe</option>
           <option value="5">Oceania</option>
         </select>
-        <button type="button" id="btnBack" style="display: none;" class="btn btn-light border border-1 btn-sm mt-3 mb-3"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;&nbsp;Back</button>
+        <button type="button" id="btnBack" onclick="goback();" style="display: none;" class="btn btn-light border border-1 btn-sm mt-3 mb-3"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;&nbsp;Back</button>
         <div id="details">
                 <div id="countries" class="my-5">
                   <div id="country"></div>

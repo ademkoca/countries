@@ -36,8 +36,9 @@
     <div class="container" id="main-container">
       <header class="container px-2 py-4"><h1 class="title"><a href="/">Where in the world?</a></h1><span class="dark-mode" id="dark-mode-switch"><i class="bi bi-moon"></i>&nbsp;Dark Mode</span></header>
       <div class="content" id="content-container">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" id="search-wrapper">
             <input id="Search" type="text" class="form-control" placeholder="Search for a country..." aria-label="Search for a country" aria-describedby="basic-addon1">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="searchCountry()">Search</button>
         </div>
         <select class="form-select col-sm-6" id="filter" onmousedown="this.value='';" onchange="filter(this.value);" aria-label="Default select example" >
           <option selected>Filter by Region</option>

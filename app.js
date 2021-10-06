@@ -67,15 +67,15 @@ function filter(value) {
         });
 }
 
-const searchBar = document.getElementById('Search');
-searchBar.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        searchCountry();
-    }
-});
+var searchBar = document.getElementById('Search');
+// searchBar.addEventListener('keypress', function (e) {
+//     if (e.key === 'Enter') {
+//         searchCountry();
+//     }
+// });
 
 function searchCountry() {
-    
+    searchBar = document.getElementById('Search');
     console.log("Search triggered!");
     previousContent.push(document.getElementById('content-container').innerHTML);
     document.getElementById('btnBack').style = "display: block;";
@@ -107,6 +107,7 @@ function searchCountry() {
             // if (countries==null) countries.innerHTML=html+"</div>";
             // else document.getElementById('details').innerHTML = html.substring(20, html.length);
         });
+   
 
 }
 
@@ -132,7 +133,7 @@ function detail(id) {
 
     previousContent.push(document.getElementById('content-container').innerHTML);
     document.getElementById('filter').style="display:none;"
-    document.getElementById('Search').style="display:none;"
+    document.getElementById('search-wrapper').style="display:none;"
     // console.log(previousContent);
     document.getElementById('details').classList.add('details');
     document.getElementById('btnBack').style = "display: block;";

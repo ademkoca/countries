@@ -171,6 +171,11 @@ h1 a:active {
     .detail-flag {
         text-align: center;
     }
+
+    .search-result {
+      max-width: 30rem;
+      min-height: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -188,7 +193,7 @@ h1 a:active {
   }
 
   .search-result {
-    max-width: 350px;
+    max-width: 99rem;
     min-height: auto;
   }
 }

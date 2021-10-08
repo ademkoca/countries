@@ -219,3 +219,43 @@ footer {
      margin-right: 5px;
      color: var(--background);
  }
+
+ .toast {
+   z-index: 10;
+ }
+
+ .toast-link, .toast-link:hover, .toast-link:active, .toast-link:link, .toast-link:visited,
+ .toast-btn, .toast-btn:hover, .toast-btn:active, .toast-btn:link, .toast-btn:visited
+ {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+button[type=button].toast-btn {
+  position: static;
+  background-color: #0d6efd;
+}
+
+.toast-body div .btn-primary {
+  background-color: #0d6efd;
+}
+
+.toast-body div .btn-primary a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.toast-body div .btn-primary a:hover, .toast-body div .btn-primary:hover {
+background-color: #0b5ed7;
+}
+
+.toast-body div .btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+
+
+.toast-body div .btn-secondary:hover {
+  background-color: #5c636a;
+}

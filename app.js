@@ -9,7 +9,7 @@ fetch(url)
             // console.log(data);
             html += `
             <div id="${country.alpha3Code}" onclick="detail(this.id);" class="country border border-1 mx-4 my-3 rounded-2">
-            <div class="flag"><img src="${country.flags.png}" loading="lazy"></div>
+            <div class="flag"><img src="${country.flags.svg}" loading="lazy"></div>
             <div class="country-info px-4 py-2"><h2 class="py-3">${country.name}</h2>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
             <p><strong>Region:</strong> ${country.region}</p>

@@ -44,7 +44,7 @@ function filter(value) {
     }
 
 
-    url = `https://restcountries.com/v2/continent/` + selectedValue;
+    url = `https://restcountries.com/v3.1/region/` + selectedValue;
     fetch(url)
         .then(response => response.json())
         .then(data => {
